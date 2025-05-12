@@ -141,3 +141,18 @@ fs.watchFile(file, () => { fs.unwatchFile(file);console.log(`Update'${__filename
   //save_status: process.env.AUTO_SAVE_STATUS || "false",
   //aitts_Voice_Id : process.env.AITTS_ID || "37",
   //ELEVENLAB_API_KEY: process.env.ELEVENLAB_API_KEY  || "",
+
+
+const express = require("express");
+const app = express();
+
+// Your actual web app or bot code
+app.get("/", (req, res) => {
+  res.send("App is alive!");
+});
+
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`App is listening on port ${port}`);
+});
+
